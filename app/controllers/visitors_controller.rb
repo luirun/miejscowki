@@ -1,7 +1,7 @@
 class VisitorsController < ApplicationController
 
 	def test
-		flash[:notice] = "Signed up #{@visitor.email}."
+		flash[:notice] = "Co tam?."
 	end
 	
 end
