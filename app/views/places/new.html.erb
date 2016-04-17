@@ -1,0 +1,9 @@
+Dodaj swoje miejsce na mapie!
+<%= simple_form_for @place, html: { multipart: true } do |form| %>
+<%= form.error_notification %>
+<%= form.input :miasto %>
+<%= form.input :adres %>
+<%= form.input :opis %>
+<%= form.file_field :image, as: :file %>
+<%= form.button :submit, 'Submit', class: 'submit' %>
+<% end %>
