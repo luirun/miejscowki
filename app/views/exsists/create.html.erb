@@ -1,0 +1,20 @@
+<center>
+<table>  
+<tr>
+	<td><b>Miasto</b></td>
+	<td><b>Adres</b></td>
+	<td><b>Opis</b></td>
+	<td><b>Zdjęcie</b></td>
+</tr>
+
+  <% @test.each do |c| %>
+   	<tr>
+	<td><%= c.miasto %></td>
+	<td><%= c.adres %></td>
+	<td><%= c.opis %></td>
+	<td><%= image_tag c.image.url, size:"640x640"  %></td>
+	</tr>
+
+   <% end %>
+ </table>
+ </center>

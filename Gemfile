@@ -46,7 +46,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # miejscowka
-gem "paperclip_database"
 gem 'rake', '~> 10.2'
 gem 'mysql2'
 gem 'compass-rails', '~> 3.0', '>= 3.0.2'
