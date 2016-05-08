@@ -14,18 +14,27 @@
 ActiveRecord::Schema.define(version: 20160417200058) do
 
   create_table "places", force: :cascade do |t|
-    t.string   "miasto",               limit: 255
-    t.string   "adres",                limit: 255
-    t.string   "opis",                 limit: 1000
-    t.binary   "zdjecie",              limit: 4294967295
-    t.string   "zdjecie_file_name",    limit: 255
-    t.string   "zdjecie_content_type", limit: 255
-    t.integer  "zdjecie_file_size",    limit: 4
-    t.datetime "zdjecie_updated_at"
-    t.string   "image_file_name",      limit: 255
-    t.string   "image_content_type",   limit: 255
-    t.integer  "image_file_size",      limit: 4
+    t.string   "miasto",             limit: 255
+    t.string   "adres",              limit: 255
+    t.string   "opis",               limit: 1000
+    t.binary   "zdjecie",            limit: 4294967295
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
+    t.string   "password_digest",    limit: 255
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "imie",               limit: 20
+    t.string "nazwisko",           limit: 50
+    t.string "miasto",             limit: 50
+    t.date   "dataur"
+    t.string "login",              limit: 255
+    t.string "password",           limit: 255
+    t.string "email",              limit: 255
+    t.string "salt",               limit: 255
+    t.string "encrypted_password", limit: 255
   end
 
 end
