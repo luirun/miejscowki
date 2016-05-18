@@ -1,3 +1,8 @@
+<% if logged_in? %>
+Jesteś już zarejestrowany!
+<% else %>
+Posiadasz już konto? <%= link_to "Zaloguj się", controller: "sessions", action: "new" %>
+<h3>Rejestracja</h3>
 <%= simple_form_for @user, html: { multipart: true } do |form| %>
 <%= form.error_notification %>
 <%= form.input :imie %>
@@ -9,4 +14,5 @@ Potwierdz Haslo<%= form.password_field :password_confirmation %>
 <%= form.input :miasto %>
 <%= form.input :dataur %>
 <%= form.button :submit, 'Submit', class: 'submit' %>
+<% end %>
 <% end %>

@@ -5,6 +5,7 @@
 	<td><b>Adres</b></td>
 	<td><b>Opis</b></td>
 	<td><b>Zdjęcie</b></td>
+	<td><b>Uzytkownik</b></td>
 </tr>
 
   <% @test.each do |c| %>
@@ -13,6 +14,7 @@
 	<td><%= c.adres %></td>
 	<td><%= c.opis %></td>
 	<td><%= image_tag c.image.url, size:"640x640"  %></td>
+	<td><%= link_to(c.user_id, user_path(c.user_id)) %></td>
 	</tr>
 
    <% end %>

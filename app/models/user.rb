@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
 	validates :password, :presence => true, :confirmation => true, length: { :in => 6..50,
 	    too_short: "The password must have at least %{count} characters.",
 		too_long: "The password must have no more than %{count} characters."}
-	validates :password_confirmation, presence: true
+	validates :password_confirmation, :presence => true, :confirmation => true, length: { :in => 6..50,
+	    too_short: "The password must have at least %{count} characters.",
+		too_long: "The password must have no more than %{count} characters."}
 	validates_presence_of :miasto, :imie, :nazwisko, :password
 
 end
