@@ -1,9 +1,11 @@
+
 <% if logged_in? %>
-<li><%= link_to "Dodaj Miejscowke", new_place_path %></li>
+<li><%= link_to "Dodaj Miejsce", new_place_path %></li>
 <li><%= link_to "Lista Miejsc", new_exsist_path %></li>
-<li><%= link_to "Log out", new_session_path, method: "delete" %></li>
+<li><%= link_to "Lista Uzytkownikow", users_path %></li>
+<li class="right"><%= link_to "Log out", new_session_path, method: "delete", class: "button small alert radius" %></li>
 <% else %>
 <li><%= link_to "Lista Miejsc", new_exsist_path %></li>
-<li><%= link_to "Zaloguj Się", new_session_path %></li>
 <li><%= link_to "Zarejestruj Się", new_user_path %></li>
+<li class="right"><%= link_to "Zaloguj Się", new_session_path, class: "button small radius" %></li>
 <% end %>

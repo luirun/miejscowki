@@ -22,19 +22,18 @@ ActiveRecord::Schema.define(version: 20160417200058) do
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
-    t.string   "password_digest",    limit: 255
+    t.integer  "user_id",            limit: 4
+    t.string   "approved",           limit: 1
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "imie",               limit: 20
-    t.string "nazwisko",           limit: 50
-    t.string "miasto",             limit: 50
+    t.string "imie",            limit: 20
+    t.string "nazwisko",        limit: 50
+    t.string "miasto",          limit: 50
     t.date   "dataur"
-    t.string "login",              limit: 255
-    t.string "password",           limit: 255
-    t.string "email",              limit: 255
-    t.string "salt",               limit: 255
-    t.string "encrypted_password", limit: 255
+    t.string "login",           limit: 255
+    t.string "email",           limit: 255
+    t.string "password_digest", limit: 255
   end
 
 end

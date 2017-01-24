@@ -6,6 +6,7 @@ class PlacesController < ApplicationController
 	
 	def create
 		@place = Place.create(secure_params)
+		@place.approved = "n"
 		@place.image = params[:place][:image]
 		@place.image.save
 		@place.user_id = user_id = current_user.id

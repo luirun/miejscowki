@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 	def create
 	@user = User.new(secure_params)
 	if @user.valid?
-		flash[:notice] = "Sczesliwa rejestracja!"
+		flash[:notice] = "Szczęśliwa rejestracja!"
 		@user.save
 		redirect_to root_path
 	else
@@ -16,8 +16,24 @@ class UsersController < ApplicationController
 	end
 	end
 	
+	def update
+		@user = User.new(secure_params)
+		if @user.valid?
+		@user.save
+		flash[:notice] = "Dodano zmiany!"
+		redirect_to admin_path
+		else
+		flash[:alert] = "Blad"
+		redirect_to edit_path
+		end
+	end
+	
 	def show
 		@user = User.find(params[:id])
+	end
+
+	def index
+		@users = User.all
 	end
 	
 	private

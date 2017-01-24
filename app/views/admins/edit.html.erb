@@ -1,0 +1,10 @@
+<%= simple_form_for @userpanel, url: url_for(:controller => :admins, :action => :update) do |form| %>
+<%= form.error_notification %>
+<%= form.input :imie %>
+<%= form.input :nazwisko %>
+<%= form.input :login %>
+<%= form.input :email %>
+<%= form.input :miasto %>
+<%= form.input :dataur %>
+<%= form.button :submit, 'Submit', class: 'submit' %>
+<% end %>
