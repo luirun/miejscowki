@@ -44,11 +44,7 @@ class AdminsController < ApplicationController
 	private
 	
 	def user_params
-<<<<<<< HEAD
 		params.require(:user).permit(:id, :imie, :nazwisko, :miasto, :dataur, :email, :login, :is_admin)
-=======
-		params.require(:user).permit(:id, :imie, :nazwisko, :miasto, :dataur, :email, :login)
->>>>>>> a867c4911a19ab7c3ee926780a236765a42ebd6a
 	end
 	
 	def place_params

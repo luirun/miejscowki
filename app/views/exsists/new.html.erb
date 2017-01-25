@@ -1,19 +1,8 @@
-<<<<<<< HEAD
 Wybierz miasto:
 
-	<%= form_for @miasto, url: {action: "create"} do |f| %>
+<%= form_for @miasto, url: {action: "create"} do |f| %>
 	<%= collection_select(:id, :miasto, @miejscowki, :miasto, :miasto) %>
       <%= f.submit "Wybierz" %>
 	  <% end %>
        </td>
-  </form>
-=======
-Wybierz miasto:
-
-	<%= form_for @miasto, url: {action: "create"} do |f| %>
-	<%= collection_select(:id, :miasto, @miejscowki, :miasto, :miasto) %>
-      <%= f.submit "Wybierz" %>
-	  <% end %>
-       </td>
-  </form>
->>>>>>> a867c4911a19ab7c3ee926780a236765a42ebd6a
+ </form>
