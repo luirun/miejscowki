@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if logged_in? %>
 Jesteś już zarejestrowany!
 <% else %>
@@ -15,4 +16,23 @@ Potwierdz Haslo<%= form.password_field :password_confirmation %>
 <%= form.input :dataur %>
 <%= form.button :submit, 'Submit', class: 'submit' %>
 <% end %>
+=======
+<% if logged_in? %>
+Jesteś już zarejestrowany!
+<% else %>
+Posiadasz już konto? <%= link_to "Zaloguj się", controller: "sessions", action: "new" %>
+<h3>Rejestracja</h3>
+<%= simple_form_for @user, html: { multipart: true } do |form| %>
+<%= form.error_notification %>
+<%= form.input :imie %>
+<%= form.input :nazwisko %>
+<%= form.input :login %>
+Haslo<%= form.password_field :password %>
+Potwierdz Haslo<%= form.password_field :password_confirmation %>
+<%= form.input :email %>
+<%= form.input :miasto %>
+<%= form.input :dataur %>
+<%= form.button :submit, 'Submit', class: 'submit' %>
+<% end %>
+>>>>>>> a867c4911a19ab7c3ee926780a236765a42ebd6a
 <% end %>

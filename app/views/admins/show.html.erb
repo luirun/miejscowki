@@ -1,5 +1,9 @@
 <% if logged_in? %>
+<<<<<<< HEAD
 	<% if current_user.is_admin == "y" %>
+=======
+	<% if current_user.id == 8 %>
+>>>>>>> a867c4911a19ab7c3ee926780a236765a42ebd6a
 <table>
 <td colspan="2">Niezaakceptowane!</td>
 <% @unapproved.each do |p| %>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if logged_in? %>
 Dodaj swoje miejsce na mapie!
 <%= simple_form_for @place, html: { multipart: true } do |form| %>
@@ -12,4 +13,20 @@ Dodaj swoje miejsce na mapie!
 Aby dodać miejscówkę musisz się <%= link_to "zalogować", controller: "sessions", action: "new" %></br>
 </br>
 Jeśli nie posiadasz konta <%= link_to "zarejstruj się", controller: "users", action: "new" %>
+=======
+<% if logged_in? %>
+Dodaj swoje miejsce na mapie!
+<%= simple_form_for @place, html: { multipart: true } do |form| %>
+<%= form.error_notification %>
+<%= form.input :miasto %>
+<%= form.input :adres %>
+<%= form.input :opis %>
+<%= form.file_field :image, as: :file %>
+<%= form.button :submit, 'Submit', class: 'submit' %>
+<% end %>
+<% else %>
+Aby dodać miejscówkę musisz się <%= link_to "zalogować", controller: "sessions", action: "new" %></br>
+</br>
+Jeśli nie posiadasz konta <%= link_to "zarejstruj się", controller: "users", action: "new" %>
+>>>>>>> a867c4911a19ab7c3ee926780a236765a42ebd6a
 <% end %>
