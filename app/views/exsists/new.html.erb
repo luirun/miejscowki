@@ -1,0 +1,8 @@
+Wybierz miasto:
+
+	<%= form_for @miasto, url: {action: "create"} do |f| %>
+	<%= collection_select(:id, :miasto, @miejscowki, :miasto, :miasto) %>
+      <%= f.submit "Wybierz" %>
+	  <% end %>
+       </td>
+  </form>

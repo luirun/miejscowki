@@ -1,0 +1,14 @@
+<table>
+<% @userplace.each do |p| %>
+<tr>
+		<td><%= p.id %></td>
+		<td><%= p.miasto %></td>
+		<td><%= p.adres %> </td>
+		<td><%= p.user_id %></td>
+		<td><%= image_tag p.image.url, size:"640x640"  %></td>
+</tr>
+<% end %>
+<td><%= link_to "Panel Edycyjny", :controller => "admins", :action => "panel", method: :get %></td>
+</table>
+
+

@@ -1,0 +1,12 @@
+<% if logged_in? %>
+ <script type="text/javascript">
+    window.location.href="/admins/panel"  // put your correct path in a string here
+ </script>
+<% end %>
+<% else %>
+<%= simple_form_for(:session, url: sessions_path) do |form| %>
+<%= form.error_notification %>
+<%= form.input :email %>
+Haslo<%= form.password_field :password %>
+<%= form.button :submit, 'Log In', class: 'submit' %>
+<% end %>

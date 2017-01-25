@@ -1,0 +1,6 @@
+<%= simple_form_for(:session, url: sessions_path) do |form| %>
+<%= form.error_notification %>
+<%= form.input :email %>
+Haslo<%= form.password_field :password %>
+<%= form.button :submit, 'Log In', class: 'submit' %>
+<% end %>

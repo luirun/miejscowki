@@ -1,0 +1,14 @@
+<%= simple_form_for @placepanel, url: url_for(:controller => :admins, :action => :placeupdate), method: :post do |form| %>
+<table>
+<tr>
+<td><%= form.error_notification %></td>
+<td><%= form.hidden_field :id %></td>
+<td><%= form.input :miasto %></td>
+<td><%= form.input :adres %></td>
+<td><%= form.input :opis %></td>
+<td><%= form.label "Approved?" %><%= form.check_box :approved, {}, "y", "n" %></td>
+<td>User:</br><%= link_to @placepanel.user_id, :controller => "admins", :action => "userplaces", id: @placepanel.user_id %></td>
+<td><%= form.button :submit, 'Submit', class: 'submit' %></td>
+</tr>
+</table>
+<% end %>
