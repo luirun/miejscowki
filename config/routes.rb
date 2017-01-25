@@ -8,11 +8,8 @@ match "admins/userp" => "admins#userp", :via => :post, :as => :userp
 get '/admins/userplaces', to: 'admins#userplaces'
 resources :places, only: [:new, :create]
 resources :visitors, only: [:new, :create]
-<<<<<<< HEAD
 resources :exsists, only: [:new, :create, :destroy]
-=======
 resources :exsists, only: [:new, :create]
->>>>>>> a867c4911a19ab7c3ee926780a236765a42ebd6a
 resources :users, only: [:new, :create, :show]
 resources :sessions, only: [:new, :create, :destroy]
 resources :admins do
